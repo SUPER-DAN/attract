@@ -6,9 +6,10 @@ targets=(
     "ubuntu-trusty"
     "debian-stretch"
     "debian-jessie"
+	 "debian-buster"
 )
 pkgname="attract"
-pkgver="2.5.0"
+pkgver="2.5.0.1"
 pkgrel="1"
 pkgdesc="Attract-Mode emulator frontend"
 pkgdesclong=(
@@ -16,7 +17,7 @@ pkgdesclong=(
  "MESS and Nestopia. It hides the underlying operating system and is intended"
  "to be controlled with a joystick, gamepad or spin dial, making it ideal for"
  "use in arcade cabinets. Attract-Mode is open source and runs on Linux, OS X"
- "and Windows."
+ "and Windows. Modified by SUPER-DAN for Raspberry PI 4 - BETA TEST"
 )
 maintainer="Andrew Mickelson <andrew@attractmode.org>"
 arch="amd64"
@@ -144,6 +145,26 @@ depends:debian-stretch=(
 	"libavformat57"
 	"libswscale4"
 	"libavresample3"
+	"libfontconfig1"
+	"libfreetype6"
+	"libglu1-mesa"
+	"libopenal1"
+	"libxinerama1"
+	"libcurl4"
+	"libjpeg62-turbo"
+)
+
+
+depends:debian-buster=(
+	"libsfml-graphics2.5"
+	"libsfml-window2.5"
+	"libsfml-network2.5"
+	"libsfml-system2.5"
+	"libavutil56"
+	"libavcodec58"
+	"libavformat58"
+	"libswscale5"
+	"libavresample4"
 	"libfontconfig1"
 	"libfreetype6"
 	"libglu1-mesa"
